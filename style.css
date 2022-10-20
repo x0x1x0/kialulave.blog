@@ -1,0 +1,126 @@
+/* Add a black background color to the top navigation */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap');
+
+
+ul {
+    list-style-type: none;
+    margin-top: 24px;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    overflow: hidden;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+
+  .logotext{
+    font-family:'Roboto', monospace;
+    font-weight: 650;
+    letter-spacing: 0.4rem;
+    font-size: 30px;
+    line-height: 10px;
+  }
+
+
+  .navitems{
+    line-height: 10px;
+    display: inline block;
+    vertical-align: middle;
+    font-size: 20px;
+    float: right;
+    font-weight: 40;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  /* Style the links inside the navigation bar */
+  /*
+  .topnav {
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    margin-top: 24px;
+    margin-left: 56px;
+    margin-right: 56px;
+  }
+  
+  .topnav a {
+    border-style: dotted;
+    float: left;
+    display: inline-block;
+    vertical-align: middle;
+    color: #000000;
+    text-align: center;
+    padding: 10px 10px;
+    margin-left: 1;
+    text-decoration: none;
+  }
+
+  .topnav-right {
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    float: right;
+    font-family: 'Roboto bold', sans-serif;
+
+
+  }
+  .logotext {
+        font-family:'Roboto', monospace;
+        font-weight: 650;
+        letter-spacing: 0.4rem;
+        font-size: 30px;
+        display: inline-block;
+        vertical-align: center;
+  } */
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    flex: 25%;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    padding: 0 10px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+  .center {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    width: 100;
+    border-style: dot;
+  }
