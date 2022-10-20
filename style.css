@@ -23,7 +23,6 @@ ul {
     text-decoration: none;
   }
 
-
   .logotext{
     font-family:'Roboto', monospace;
     font-weight: 650;
@@ -52,7 +51,7 @@ ul {
   
   /* Create four equal columns that sits next to each other */
   .column {
-    flex: 25%;
+    flex: 20%;
     max-width: 100%;
     padding: 0 10px;
   }
@@ -63,23 +62,42 @@ ul {
     vertical-align: middle;
     width: 100%;
   }
+  .burgermenu {
+    visibility: hidden;
+    float: right;
+  }
+
+  .burgerbar {
+      width: 35px;
+      height: 5px;
+      background-color: black;
+      margin: 6px 0;
+      visibility: hidden;
+    }
   
   /* Responsive layout - makes a two column-layout instead of four columns */
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 600px) {
     .column {
-      flex: 50%;
-      max-width: 50%;
+      flex: 25%;
+      max-width: 25%;
     }
+
   }
   
   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 700px) {
     .column {
       flex: 100%;
       max-width: 100%;
     }
+    .navitems{
+      display: none;
+    }
+    .burgerbar{
+      visibility: visible;
+    }
   }
-  .center {
+  .censdter {
     padding-left: 4rem;
     padding-right: 4rem;
     width: 100;
