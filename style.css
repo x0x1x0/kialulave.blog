@@ -43,46 +43,7 @@ ul {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
-  /* Style the links inside the navigation bar */
-  /*
-  .topnav {
-    background-color: rgb(255, 255, 255);
-    overflow: hidden;
-    margin-top: 24px;
-    margin-left: 56px;
-    margin-right: 56px;
-  }
   
-  .topnav a {
-    border-style: dotted;
-    float: left;
-    display: inline-block;
-    vertical-align: middle;
-    color: #000000;
-    text-align: center;
-    padding: 10px 10px;
-    margin-left: 1;
-    text-decoration: none;
-  }
-
-  .topnav-right {
-    text-align: center;
-    display: inline-block;
-    font-size: 20px;
-    float: right;
-    font-family: 'Roboto bold', sans-serif;
-
-
-  }
-  .logotext {
-        font-family:'Roboto', monospace;
-        font-weight: 650;
-        letter-spacing: 0.4rem;
-        font-size: 30px;
-        display: inline-block;
-        vertical-align: center;
-  } */
-
   .row {
     display: flex;
     flex-wrap: wrap;
