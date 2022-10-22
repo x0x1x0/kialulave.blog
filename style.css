@@ -1,105 +1,178 @@
-/* Add a black background color to the top navigation */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+script
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap');
 
 
-ul {
-    list-style-type: none;
-    margin-top: 24px;
-    padding-right: 3rem;
-    padding-left: 3rem;
-    overflow: hidden;
-  }
-  
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    padding: 14px 16px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #ffffff;
+    font-size: 80%;
+    font-family: 'Roboto', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
     text-decoration: none;
+}
+
+h1 {text-align: center;}
+.center {
+  margin: auto;
+  margin-top: 30vh;
+  width: 60%;
+  padding: 10px;
   }
+.header{
+  margin-top: 24px;
+  margin-left: 24px;
+  margin-right: 24px;
+  border-bottom: 1px solid #E2E8F0;
+}
 
-  .logotext{
-    font-family:'Roboto', monospace;
-    font-weight: 650;
-    letter-spacing: 0.4rem;
-    font-size: 30px;
-    line-height: 10px;
-  }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  margin-left: 5rem;
+}
+
+.nav-link{
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #000000;
+}
+
+.nav-link:hover{
+  color: #c989dd;
+}
+
+.nav-logo {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: 8px;
+  font-family: 'Roboto Mono'
+}
+
+img {
+  filter: grayscale(0);
+  transition: 0.3s;
+  display: block;
+  overflow: hidden;
+}
 
 
-  .navitems{
-    line-height: 10px;
-    display: inline block;
-    vertical-align: middle;
-    font-size: 20px;
-    float: right;
-    font-weight: 40;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
+img:hover  {
+  filter: grayscale(0);
+  transform: scale(1.03);
 
+}
   
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 10px;
-  }
-  
-  /* Create four equal columns that sits next to each other */
-  .column {
-    flex: 20%;
-    max-width: 100%;
-    padding: 0 10px;
-  }
-  
-  .column img {
-    margin-top: 8px;
-    padding: 0 10px;
-    vertical-align: middle;
-    width: 100%;
-  }
-  .burgermenu {
-    visibility: hidden;
-    float: right;
-  }
 
-  .burgerbar {
-      width: 35px;
-      height: 5px;
-      background-color: black;
-      margin: 6px 0;
+@media only screen and (max-width: 768px) {
+  .nav-menu {
       visibility: hidden;
-    }
-  
-  /* Responsive layout - makes a two column-layout instead of four columns */
-  @media screen and (max-width: 600px) {
-    .column {
-      flex: 25%;
-      max-width: 25%;
-    }
+      position: fixed;
+      left: -100%;
+      top: 5rem;
+      flex-direction: column;
+  }
 
+  .nav-menu.active {
+      left: 0;
   }
-  
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 700px) {
-    .column {
-      flex: 100%;
-      max-width: 100%;
-    }
-    .navitems{
-      display: none;
-    }
-    .burgerbar{
-      visibility: visible;
-    }
+
+  .nav-item {
+      margin: 2.5rem 0;
   }
-  .censdter {
-    padding-left: 4rem;
-    padding-right: 4rem;
-    width: 100;
-    border-style: dot;
+
+  .hamburger {
+      display: block;
+      cursor: pointer;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+}
+
+.wrapper{
+margin: 4vh;
+
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 10px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 20%;
+  max-width: 100%;
+  padding: 0 6px;
+}
+
+.column img {
+  margin-top: 12px;
+  padding: 0 10px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 25%;
+    max-width: 25%;
+  }
+
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
   }
