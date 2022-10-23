@@ -13,7 +13,6 @@ script
 html {
     background-color: #ffffff;
     font-size: ;
-    font-family: 'Roboto', sans-serif;
 }
 
 li {
@@ -67,6 +66,7 @@ h1 {text-align: center;}
 
 .nav-item {
   margin-left: 5rem;
+  font-family: 'Roboto', sans-serif;
 }
 
 .nav-link{
@@ -80,11 +80,12 @@ h1 {text-align: center;}
 }
 
 .nav-logo {
+  letter-spacing: 10px;
+  font-family: 'Roboto',bold, sans-serif;
   font-size: 2rem;
   font-weight: 700;
   color: #000000;
-  letter-spacing: 6px;
-  font-family: 'Roboto Mono'
+
 }
 
 img {
